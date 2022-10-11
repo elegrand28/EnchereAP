@@ -8,4 +8,6 @@ public partial class VueLogin : ContentPage
 		InitializeComponent();
 		BindingContext = vueModele = new LoginVuesModeles();
 	}
+
+	
 }
