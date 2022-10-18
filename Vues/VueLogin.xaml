@@ -39,10 +39,9 @@
                                      Grid.Row="0"
                                      HeightRequest="100"
                                      Margin="89">
-                            
                             <Label Text="Identification"
                                    TextColor="#F5CB5C"
-                                   FontSize="20"
+                                   FontSize="18"
                                    FontAttributes="Bold"
                                    />
                           
@@ -55,10 +54,16 @@
                                 <Frame Opacity="0.3"
 										 BackgroundColor="#F5CB5C"
 										 CornerRadius="5"/>
+                               
                                 <Entry  BackgroundColor="Transparent"
+                                        
 											Placeholder="Username"  
 											TextColor="Black" Margin="10"
-											PlaceholderColor="Black"/>
+											PlaceholderColor="Black"
+                                        x:Name="Username"
+                                        
+                                        />
+                                
 
                             </Grid>
                         </StackLayout>
@@ -72,7 +77,8 @@
                                 <Entry  BackgroundColor="Transparent"
 											Placeholder="Password"  
 											TextColor="Black" Margin="10"
-											PlaceholderColor="Black"/>
+											PlaceholderColor="Black"
+                                        x:Name="Password"/>
                             </Grid>
                         </StackLayout>
                         <StackLayout Grid.Row="2"
@@ -80,16 +86,20 @@
 									 HeightRequest="200">
                             <Grid Margin="0,75,0,0">
                                 <Button Text="Continuer"
-												TextColor="Black"
-												WidthRequest="100"
-												Margin="0,0,0,0"
-												BackgroundColor="#F5CB5C">
+										TextColor="Black"
+										WidthRequest="100"
+										Margin="0,0,0,0"
+										BackgroundColor="#F5CB5C"
+                                        Clicked="ButtonLogin">
                                 </Button>
                             </Grid>
                         </StackLayout>
+                        
+
                     </Grid>
                 </Frame>
             </StackLayout>
         </StackLayout>
     </Grid>
+   
 </ContentPage>

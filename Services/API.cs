@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
+using APre.Modeles;
 
 namespace APre.Services
 {
-    class Api
+     public class Api
     {
         /// <summary>
         /// Cette methode est générique
@@ -25,6 +26,7 @@ namespace APre.Services
         ///MaListeClients = await _apiServices.GetAllAsync<Client>("api/clients", Client.CollClasse);
         ///}
         /// <returns>la liste des occurences</returns>
+        private readonly Api _apiServices;
         public async Task<ObservableCollection<T>> GetAllAsync<T>(string paramUrl, List<T> param)
         {
             try
@@ -120,6 +122,10 @@ namespace APre.Services
             {
                 return default(T);
             }
+        }
+        public async Task GetUserByUsernameAndPass(string Username, string Password)
+        {
+            var x = await _apiServices.GetOneAsync<User>("api/getUser", new User(0, Username, "", Password, ""));
         }
     }
 }

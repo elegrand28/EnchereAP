@@ -22,12 +22,17 @@ namespace APre.Modeles
         public string _password;
         public string _email;
 
+        public static User UtilisateurConnecté;
         #endregion
 
         #region Constructeurs
-        public User()
+        public User(int id, string pseudo, string photo, string password, string email)
         {
-
+            Id = id;
+            Pseudo = pseudo;
+            Photo = photo;
+            Password = password;
+            Email = email;
         }
 
 
@@ -35,11 +40,11 @@ namespace APre.Modeles
 
         #region Getters/Setters
         [PrimaryKey,AutoIncrement]
-        public int id { get { return _id; } set { _id = value; } }
-        public string pseudo { get { return _pseudo; } set { _pseudo = value; } }
-        public string photo { get { return _photo; } set { _photo = value; } }
-        public string password { get { return _password; } set { _password = value; } }
-        public string email { get { return _email; } set { _email = value; } }
+        public int Id { get { return _id; } set { _id = value; } }
+        public string Pseudo { get { return _pseudo; } set { _pseudo = value; } }
+        public string Photo { get { return _photo; } set { _photo = value; } }
+        public string Password { get { return _password; } set { _password = value; } }
+        public string Email { get { return _email; } set { _email = value; } }
 
 
         #endregion

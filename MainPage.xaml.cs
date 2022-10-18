@@ -1,4 +1,6 @@
-﻿namespace APre;
+﻿using APre.Modeles;
+
+namespace APre;
 
 public partial class MainPage : ContentPage
 {
@@ -14,9 +16,9 @@ public partial class MainPage : ContentPage
 		count++;
 
 		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
+			CounterBtn.Text = $"Utilisateur {User.UtilisateurConnecté.Pseudo} a cliqué {count} time";
 		else
-			CounterBtn.Text = $"Clicked {count} times";
+			CounterBtn.Text = $"Utilisateur {User.UtilisateurConnecté.Pseudo} a cliqué {count} times";
 
 		SemanticScreenReader.Announce(CounterBtn.Text);
 	}
