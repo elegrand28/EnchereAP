@@ -57,9 +57,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\flechederetour.jpg" />
+	  <None Remove="Resources\Images\flecheretour.png" />
+	  <None Remove="Resources\Images\photo.png" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <Folder Include="Modeles\" />
-	  <Folder Include="VueModeles\" />
-	  <Folder Include="Vues\" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -70,6 +74,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="EnchereSurprise.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Vues\encheretypeclassqiue.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

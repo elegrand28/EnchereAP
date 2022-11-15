@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AP_Enchere.Vue.encheretypeclassique"
+             Title="encheretypeclassique">
+    <VerticalStackLayout 
+        BackgroundColor="#333533" 
+        
+        >
+        
+
+        <ImageButton Grid.Column="1" Clicked="ClickRetour"
+            Source="flecheretour.png" Aspect="Fill" CornerRadius="100" WidthRequest="50" HorizontalOptions="Start"
+            />
+<StackLayout Padding="10" Spacing="10"  >
+        <Label Text="Nom de la figurine "
+               FontSize="30"
+               />
+        </StackLayout>
+        <Border StrokeShape="RoundRectangle 40">
+            <StackLayout BackgroundColor="#F5CB5C">
+                <Border StrokeShape="RoundRectangle 40 ">
+                    <Image Source="photo.png" BackgroundColor="#242423" WidthRequest="300"/>
+                </Border>
+            </StackLayout>
+        </Border>
+        <StackLayout Padding="10" Spacing="10" VerticalOptions="Center" >
+            
+            <Border StrokeShape="RoundRectangle 8">
+                <StackLayout BackgroundColor="#F5CB5C">
+                    <Label Text="Date début  $dateDuDebut " FontSize="15"/>
+                    
+                </StackLayout>
+            </Border>
+            <ContentView>
+                <Frame HasShadow="True" CornerRadius="15" Margin="20" Padding="10" HeightRequest="100" BackgroundColor="AliceBlue">
+                    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <StackLayout Orientation="Horizontal" Spacing="8">
+                            <Label Text="Temps restant" HorizontalOptions="CenterAndExpand"  FontSize="15" TextColor="Black"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal"  Grid.Row="1" HorizontalOptions="CenterAndExpand" Spacing="30">
+                            <StackLayout>
+                                <Label Text="{Binding TempsRestantJour}" FontSize="35" FontAttributes="Bold" TextColor="Black" HorizontalOptions="End"/>
+                                <Label Text="JOURS" FontSize="10" TextColor="Black" Opacity="0.5" HorizontalOptions="End" Margin="0,-5,0,0"/>
+                            </StackLayout>
+                            <StackLayout>
+                                <Label Text="{Binding TempsRestantHeures}" FontSize="35" FontAttributes="Bold" TextColor="Black" HorizontalOptions="End"/>
+                                <Label Text="HEURES" FontSize="10" TextColor="Black" Opacity="0.5" HorizontalOptions="End" Margin="0,-5,0,0"/>
+                            </StackLayout>
+                            <StackLayout>
+                                <Label Text="{Binding TempsRestantMinutes}" FontSize="35" FontAttributes="Bold" TextColor="Black" HorizontalOptions="End"/>
+                                <Label Text="MINUTES" FontSize="10" TextColor="Black" Opacity="0.5" HorizontalOptions="End" Margin="0,-5,0,0"/>
+                            </StackLayout>
+                            <StackLayout>
+                                <Label Text="{Binding TempsRestantSecondes}" FontSize="35" FontAttributes="Bold" TextColor="Black" HorizontalOptions="End"/>
+                                <Label Text="SECONDES" FontSize="10" TextColor="Black" Opacity="0.5" HorizontalOptions="End" Margin="0,-5,0,0"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+            </ContentView>
+            <Border StrokeShape="RoundRectangle 8">
+                <StackLayout BackgroundColor="#F5CB5C" Padding="5" >
+                    <Label Text="Votre proposition : $dernierePropal"/>
+                    <Entry Placeholder="Saisir une enchere" PlaceholderColor="White" />
+                    <Button Text="Valider" BackgroundColor="#242423" TextColor="White"/>
+                </StackLayout>
+            </Border>
+            
+
+        </StackLayout>
+
+        <Label Text="Les 6 dernières enchères"/>
+        <StackLayout Padding="7" Spacing="4" VerticalOptions="Center">
+            <Border StrokeShape="RoundRectangle 8">
+                <StackLayout BackgroundColor="#242423">
+                    <Label Text="$nom $prix" />
+                </StackLayout>
+            </Border>
+            <Border StrokeShape="RoundRectangle 8">
+                <StackLayout BackgroundColor="#242423">
+                    <Label Text="$nom $prix" />
+                </StackLayout>
+            </Border>
+            <Border StrokeShape="RoundRectangle 8">
+                <StackLayout BackgroundColor="#242423">
+                    <Label Text="$nom $prix" />
+                </StackLayout>
+            </Border>
+            <Border StrokeShape="RoundRectangle 8">
+                <StackLayout BackgroundColor="#242423">
+                    <Label Text="$nom $prix" />
+                </StackLayout>
+            </Border>
+            <Border StrokeShape="RoundRectangle 8">
+                <StackLayout BackgroundColor="#242423">
+                    <Label Text="$nom $prix" />
+                </StackLayout>
+                
+            </Border>
+            <Border StrokeShape="RoundRectangle 8">
+                <StackLayout BackgroundColor="#242423">
+                    <Label Text="$nom $prix" />
+                </StackLayout>
+            </Border>
+
+        </StackLayout>
+
+    </VerticalStackLayout>
+
+</ContentPage>
