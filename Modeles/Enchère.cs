@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 namespace APre.Modeles
 {
 
+        [Table("enchere")]
     public class Enchère
     {
-
 
 
         #region Attributs
@@ -39,6 +39,7 @@ namespace APre.Modeles
             _leProduit = leProduit;
             _typeEnchere = typeEnchere;
             _leMagasin = leMagasin;
+            collClass.Add(this);
         }
 
         #endregion
@@ -52,11 +53,11 @@ namespace APre.Modeles
         public int PrixDeDepart { get => _prixDeDepart; set => _prixDeDepart = value; }
 
         [ForeignKey(typeof(TypeEnchere))]
-        public string TypeEnchereId { get; set; }
+        public int TypeEnchereId { get; set; }
         [ForeignKey(typeof(Magasin))]
-        public string MagasinId { get; set; }
+        public int MagasinId { get; set; }
         [ForeignKey(typeof(Produit))]
-        public string ProduitId { get; set; }
+        public int ProduitId { get; set; }
 
         [OneToOne(nameof(ProduitId))]
         public Produit Leproduit { get => _leProduit; set => _leProduit = value; }
