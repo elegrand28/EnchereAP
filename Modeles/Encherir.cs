@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace APre.Modeles
 {
     public class Encherir
-    {
+    { 
 
         #region Attributs
         public static List<Encherir> collClass = new List<Encherir>();
