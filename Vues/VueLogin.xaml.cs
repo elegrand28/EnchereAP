@@ -25,7 +25,7 @@ public partial class VueLogin : ContentPage
 			if (leUser != null)
 			{
 				User.UtilisateurConnecté = leUser;
-                await Navigation.PushModalAsync(new MainPage());
+                await Navigation.PushModalAsync(new VuePageChoixEnchere());
 
             } else
 			{
