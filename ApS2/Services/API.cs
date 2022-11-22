@@ -129,5 +129,10 @@ namespace ApS2.Services
         {
             var x = await _apiServices.GetOneAsync<User>("api/getUser", new User(0, Username, "", Password, ""));
         }
+
+        public async Task GetEnchereEnCours(int id)
+        {
+            var x = await _apiServices.GetAllAsyncID<Enchere>("api/GetEnchereEnCours", Enchere.collClass, "Id", id);
+        }
     }
 }

@@ -29,6 +29,7 @@ namespace ApS2.Modele
             _prixEnchere = prixEnchere;
             this.dateenchere = dateenchere;
 
+            
             #endregion
 
             #region Getters/Setters
