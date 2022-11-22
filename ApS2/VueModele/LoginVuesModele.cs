@@ -24,7 +24,7 @@ namespace ApS2.VueModele
         public LoginVueModele()
         {
 
-            //this.PostUser(new User(0, "esssssai01", "tititiddddtit","pseudo","ddd"));
+            //this.PostUser(new User(0, "esssssai01", "tititiddddtit","pseudo","ddd"));w
         }
 
         #endregion
