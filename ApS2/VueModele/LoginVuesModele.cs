@@ -60,13 +60,7 @@ namespace ApS2.VueModele
 
         }
 
-        /* public async void GetUserByPseudoAndPass(string param)
-         {
-             if(LeUser!=null)
-             {
-             }
-         }
-        */
+       
         #endregion
     }
 }

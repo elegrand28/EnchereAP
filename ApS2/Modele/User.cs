@@ -29,6 +29,7 @@ namespace ApS2.Modele
             Photo = photo;
             Password = password;
             Email = email;
+            collClass.Add(this);
         }
 
 

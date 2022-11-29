@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace ApS2.Modele
 {
+    [Table("Enchere")]
     public class Enchere
     {
 
@@ -36,6 +37,7 @@ namespace ApS2.Modele
             _leProduit = leProduit;
             _typeEnchere = typeEnchere;
             _leMagasin = leMagasin;
+            collClass.Add(this);
         }
 
         #endregion
@@ -46,24 +48,24 @@ namespace ApS2.Modele
         public DateTime DateDebut { get => _dateDebut; set => _dateDebut = value; }
         public DateTime DateFin { get => _dateFin; set => _dateFin = value; }
         public int PrixReserve { get => _prixReserve; set => _prixReserve = value; }
-        public int PrixDeDepart { get => _prixDeDepart; set => _prixDeDepart = value; }
+        public int PrixDepart { get => _prixDeDepart; set => _prixDeDepart = value; }
 
-        [ForeignKey(typeof(TypeEnchere))]
-        public string TypeEnchereId { get; set; }
-        [ForeignKey(typeof(Magasin))]
-        public string MagasinId { get; set; }
-        [ForeignKey(typeof(Produit))]
-        public string ProduitId { get; set; }
 
-        [OneToOne(nameof(ProduitId))]
+       
+       
+
+
         public Produit Leproduit { get => _leProduit; set => _leProduit = value; }
 
-        [ManyToOne(nameof(TypeEnchereId))]
-        public TypeEnchere LeTypeEnchere { get => _typeEnchere; set => _typeEnchere = value; }
 
-        [ManyToOne(nameof(MagasinId))]
+
+
+
 
         public Magasin LeMagasin { get => _leMagasin; set => _leMagasin = value; }
+
+        public TypeEnchere TypeEnchere { get => _typeEnchere; set => _typeEnchere = value; }
+
 
 
 
@@ -77,5 +79,5 @@ namespace ApS2.Modele
     }
 }
 
-    
+
 
