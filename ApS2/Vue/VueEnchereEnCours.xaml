@@ -8,7 +8,7 @@
        
 
 
-        <CollectionView ItemsSource="{Binding EnchereList}">
+        <CollectionView ItemsSource="{Binding EnchereClassiqueList}">
 
             <CollectionView.ItemTemplate>
                     <DataTemplate>
