@@ -68,9 +68,6 @@
 	  <MauiXaml Update="Vue\VueEnchereClassique.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Vue\VueEnchereEnCours.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
 	  <MauiXaml Update="Vue\VueEnchereInverse.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

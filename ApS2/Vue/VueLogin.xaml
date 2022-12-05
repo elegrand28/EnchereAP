@@ -67,6 +67,7 @@
 
                             </Grid>
                         </StackLayout>
+
                         <StackLayout Grid.Row="1"
 									 Grid.Column="0"
 									 HeightRequest="50">

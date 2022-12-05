@@ -8,13 +8,6 @@
             <Button BackgroundColor="#F5CB5C"
                     HeightRequest="100"
                     WidthRequest="300"
-                    Text="Enchère En Cours"
-                    FontSize="20" TextColor="#242423"
-                    Clicked="OnClick4" 
-                    ImageSource="ico_encheres.png"/>
-            <Button BackgroundColor="#F5CB5C"
-                    HeightRequest="100"
-                    WidthRequest="300"
                     Text="Enchère Classique"
                     FontSize="20" TextColor="#242423"
                     Clicked="OnClick" 

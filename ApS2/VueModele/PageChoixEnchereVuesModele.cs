@@ -60,11 +60,16 @@ namespace ApS2.VueModele
 
         }
 
-        
-            
-    
-         
-        
+        public async void PostEnchereClassique(int param )
+        {
+            int x = await _apiServices.PostAsync(param, "api/postEncherir");
+        }
+
+
+
+
+
+
 
 
     }

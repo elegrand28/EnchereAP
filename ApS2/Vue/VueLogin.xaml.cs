@@ -19,6 +19,7 @@ public partial class VueLogin : ContentPage
 
         var leUsername = Username.Text;
         var lePassword = Password.Text;
+       
 
         if (Username.Text != null & Password.Text != null)
         {

@@ -25,9 +25,6 @@ public partial class VuePageChoixEnchere : ContentPage
         await Navigation.PushModalAsync(new VueEnchereSurprise());
 
     }
-    async void OnClick4(object sender, EventArgs args)
-    {
-        await Navigation.PushModalAsync(new VueEnchereEnCours());
+    
 
-    }
 }  

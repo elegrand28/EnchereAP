@@ -3,10 +3,65 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ApS2.Vue.VueEnchereClassique"
              Title="VueEnchereClassique">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <ScrollView BackgroundColor="White">
+        <VerticalStackLayout >
+
+
+
+            <CollectionView ItemsSource="{Binding EnchereClassiqueList}">
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        
+                            <StackLayout Margin="40">
+                                <Frame  BackgroundColor="White">
+                                        <Label TextColor="Black"  Text="{Binding Leproduit.Nom,StringFormat='Figurine: {0}' }"/>
+                                </Frame>
+
+
+                                <Frame  BackgroundColor="White">
+                                <Label  TextColor="Black" Text="{Binding Leproduit.Prixreel,StringFormat='Prix de reserve: {0}'}"/>
+                                </Frame>
+                                <Frame BackgroundColor="White">
+
+                                    <Image Source="{Binding Leproduit.Photo}"/>
+                             </Frame>
+                          
+                            <Frame BackgroundColor="White" >
+                                <Button Background="white"
+                                        Text="Soumettre une enchère"
+                                        Clicked="BoutonSoumettre"/>
+                                
+                                        
+                                        
+                            </Frame>
+
+                            </StackLayout>
+
+                            
+                        
+                  
+
+                      
+
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>  
+            <Frame BackgroundColor="White">
+
+                                <Entry  BackgroundColor="White"
+                                        
+											Placeholder="Donner prix"  
+											TextColor="Black" Margin="10"
+											PlaceholderColor="White"
+                                            x:Name="Prix"
+                                        
+                                        />
+                            </Frame >
+
+
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
