@@ -18,8 +18,14 @@ namespace ApS2.VueModele
 
         private ObservableCollection<Enchere> _enchereList;
         private ObservableCollection<Enchere> _enchereListClassique;
+        private ObservableCollection<Encherir> _encherirList;
+        public static User LeUser;
 
-
+       public ObservableCollection<Encherir> EncherirList
+        {
+            get { return _encherirList; }
+            set { SetProperty(ref _encherirList,value);}
+        }
 
         public ObservableCollection<Enchere> EnchereList
         {
@@ -32,13 +38,14 @@ namespace ApS2.VueModele
             set{  SetProperty(ref _enchereListClassique, value);}
             
         }
+        
 
 
 
         public PageChoixEnchereVuesModele()
         {
+            GetUser();
             Init();
-
         }
 
         public async Task<ObservableCollection<Enchere>> GetEnchereTypeEnCours(int letype)
@@ -56,14 +63,40 @@ namespace ApS2.VueModele
         public async void Init()
         {
             EnchereClassiqueList = await GetEnchereTypeEnCours(1);
+           
+           
             
 
         }
 
-        public async void PostEnchereClassique(int param )
+        public async void PostEnchereClassique(float param, Enchere current )
         {
-            int x = await _apiServices.PostAsync(param, "api/postEncherir");
+             var x = await _apiServices.PostAsync<Encherir>(new Encherir(LeUser, current, param, LeUser.Pseudo), "api/postEncherir");
+           
+           
         }
+        public async void GetUser()
+        {
+            string x = await SecureStorage.Default.GetAsync("session");
+
+            if (x != null)
+            {
+                LeUser = await _apiServices.GetOneAsyncID<User>
+                    ("api/getUser", x);
+                Enchere.collClass.Clear();
+            
+            }
+        }
+
+        public async  Task<ObservableCollection<Encherir>> GetLastOffer(int id)
+        {
+            var x = await _apiServices.GetAllAsyncID("api/getLastSixOffer", Encherir.collClass, "Id", id);
+            Encherir.collClass.Clear();
+            return x;
+
+        }
+
+       
 
 
 

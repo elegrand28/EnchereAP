@@ -55,10 +55,14 @@ namespace ApS2.VueModele
 
 
         public async Task<User> GetUserByUsernameAndPass(string Username, string Password)
-        { 
-            return await _apiServices.GetOneAsync<User>("api/getUserByMailAndPass", new User(0, "", "", Password, Username));
+        {
+            LeUser = new User(0, "", "", Password, Username);
+            LeUser= await _apiServices.GetOneAsync<User>("api/getUserByMailAndPass", new User(0, "", "", Password, Username));
+            await SecureStorage.Default.SetAsync("session", "" + LeUser.Id);
+            return LeUser;
 
         }
+
 
        
         #endregion

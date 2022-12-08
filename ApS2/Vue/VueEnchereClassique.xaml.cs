@@ -6,6 +6,7 @@ namespace ApS2.Vue;
 
 public partial class VueEnchereClassique : ContentPage
 {
+    Enchere currentEnchere;
     PageChoixEnchereVuesModele vueModele;
     public VueEnchereClassique()
     {
@@ -15,26 +16,31 @@ public partial class VueEnchereClassique : ContentPage
 
     }
 
-    public async void BoutonSoumettre(object sender, EventArgs args)
+
+
+
+
+    private async void CollectionView_SelectionChanged(System.Object sender, Microsoft.Maui.Controls.SelectionChangedEventArgs e)
     {
-        string result = await DisplayPromptAsync("Enchère", "Donner votre prix");
-
-        int Leresult = Convert.ToInt32(result);
-        
-        
-            foreach (Enchere leprix in vueModele.EnchereClassiqueList)
-            {
-                if (Leresult >= leprix.Leproduit.Prixreel)
-                {
-                
-            }
-            }
-        }
-       
-           
-
-
+        currentEnchere= (Enchere)e.CurrentSelection.FirstOrDefault();
+        await Navigation.PushModalAsync(new VueEnchere(currentEnchere));
     }
+}
+
+   /* private async void CollectionView_SelectionChanged(System.Object sender, Microsoft.Maui.Controls.SelectionChangedEventArgs e)
+    {
+        currentEnchere = (Enchere)e.CurrentSelection.FirstOrDefault();
+        string result = await DisplayPromptAsync("Enchère", "Donner votre prix");
+ 
+        float Leresult = Convert.ToInt32(result);
+        vueModele.PostEnchereClassique(Leresult, currentEnchere);
+    }
+}
+   */
 
 
-  
+
+
+
+
+

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ApS2.Vue.VueEnchere"
+             Title="VueEnchere">
+    <ScrollView BackgroundColor="White">
+        <CollectionView ItemsSource="{Binding ListEncherir}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                  
+
+
+                                <Grid RowDefinitions="100, 100, *" 
+						  ColumnDefinitions="*,10" 
+						  Margin="0,0,0,0">
+
+                        <Frame Grid.Column="0"
+                                     Grid.Row="0"
+                                    
+                                      BackgroundColor="BlueViolet"
+                               Margin="20">
+
+                            <Label 
+                                               Text="{Binding PrixEnchere}"
+                                               TextColor="Black"
+                                                            />
+
+                                        </Frame>
+                                        
+                                        <Frame Grid.Column="1"
+                                               Grid.Row="0"
+                                               Margin="20"
+                                                
+                                      BackgroundColor="BlueViolet">
+                                <Label Text="{Binding LaEnchere.Pseudo }"
+                                       TextColor="Black">
+                                                
+                                            </Label>
+                                        </Frame>
+                                   
+                                </Grid>
+                          
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </ScrollView>
+</ContentPage>

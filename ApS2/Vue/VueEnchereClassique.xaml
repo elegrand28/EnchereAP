@@ -8,12 +8,13 @@
 
 
 
-            <CollectionView ItemsSource="{Binding EnchereClassiqueList}">
+            <CollectionView ItemsSource="{Binding EnchereClassiqueList}" SelectionChanged="CollectionView_SelectionChanged" SelectionMode="Single">
+                
 
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         
-                            <StackLayout Margin="40">
+                            <StackLayout Margin="200,0,200,200">
                                 <Frame  BackgroundColor="White">
                                         <Label TextColor="Black"  Text="{Binding Leproduit.Nom,StringFormat='Figurine: {0}' }"/>
                                 </Frame>
@@ -26,15 +27,20 @@
 
                                     <Image Source="{Binding Leproduit.Photo}"/>
                              </Frame>
-                          
-                            <Frame BackgroundColor="White" >
-                                <Button Background="white"
-                                        Text="Soumettre une enchère"
-                                        Clicked="BoutonSoumettre"/>
-                                
-                                        
-                                        
+                            <Frame BackgroundColor="White">
+                                <ListView ItemsSource="{Binding EncherirList}">
+                                    <ListView.ItemTemplate>
+                                        <DataTemplate>
+                                            <Label TextColor="Black" Text="{Binding PrixEnchere}"/>
+                                        </DataTemplate>
+                                    </ListView.ItemTemplate>
+                                </ListView>
+
                             </Frame>
+                                
+                            
+                          
+                          
 
                             </StackLayout>
 
@@ -48,18 +54,9 @@
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
 
-            </CollectionView>  
-            <Frame BackgroundColor="White">
+            </CollectionView>
 
-                                <Entry  BackgroundColor="White"
-                                        
-											Placeholder="Donner prix"  
-											TextColor="Black" Margin="10"
-											PlaceholderColor="White"
-                                            x:Name="Prix"
-                                        
-                                        />
-                            </Frame >
+
 
 
         </VerticalStackLayout>
