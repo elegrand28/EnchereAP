@@ -14,6 +14,7 @@ namespace ApS2.VueModele
         private Enchere _laEnchere;
         private readonly Api _apiServices = new Api();
         private ObservableCollection<Encherir> _listEncherir;
+        public static User LeUser;
 
         public Enchere LaEnchere { get => _laEnchere; set => SetProperty(ref _laEnchere, value); }
         public ObservableCollection<Encherir> ListEncherir { get => _listEncherir; set => SetProperty(ref _listEncherir, value); }
@@ -33,9 +34,14 @@ namespace ApS2.VueModele
             return x;
 
         }
+       
         public async void Init ()
         {
             ListEncherir = await GetLastOffer(LaEnchere.Id);
+        }
+        public async void PostEnchereClassique(float param, Enchere current)
+        {
+            var x = await _apiServices.PostAsync<Encherir>(new Encherir(LeUser, current, param, LeUser.Pseudo), "api/postEncherir");
         }
 
     }

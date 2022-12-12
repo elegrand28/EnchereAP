@@ -4,42 +4,27 @@
              x:Class="ApS2.Vue.VueEnchere"
              Title="VueEnchere">
     <ScrollView BackgroundColor="White">
-        <CollectionView ItemsSource="{Binding ListEncherir}">
+        <CollectionView ItemsSource="{Binding ListEncherir}" SelectionChanged="Bouton" SelectionMode="Single">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                  
 
 
-                                <Grid RowDefinitions="100, 100, *" 
-						  ColumnDefinitions="*,10" 
-						  Margin="0,0,0,0">
 
-                        <Frame Grid.Column="0"
-                                     Grid.Row="0"
-                                    
-                                      BackgroundColor="BlueViolet"
-                               Margin="20">
 
-                            <Label 
-                                               Text="{Binding PrixEnchere}"
-                                               TextColor="Black"
+                    <HorizontalStackLayout Margin="30">
+
+
+                      
+
+                        <Label 
+                            Text="{Binding PrixEnchere}"
+                            TextColor="Black"
                                                             />
 
-                                        </Frame>
-                                        
-                                        <Frame Grid.Column="1"
-                                               Grid.Row="0"
-                                               Margin="20"
-                                                
-                                      BackgroundColor="BlueViolet">
-                                <Label Text="{Binding LaEnchere.Pseudo }"
-                                       TextColor="Black">
-                                                
-                                            </Label>
-                                        </Frame>
-                                   
-                                </Grid>
-                          
+
+                    </HorizontalStackLayout>
+                
+
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>

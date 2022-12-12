@@ -88,13 +88,7 @@ namespace ApS2.VueModele
             }
         }
 
-        public async  Task<ObservableCollection<Encherir>> GetLastOffer(int id)
-        {
-            var x = await _apiServices.GetAllAsyncID("api/getLastSixOffer", Encherir.collClass, "Id", id);
-            Encherir.collClass.Clear();
-            return x;
-
-        }
+      
 
        
 

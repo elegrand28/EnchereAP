@@ -24,10 +24,8 @@ public partial class VueEnchereClassique : ContentPage
     {
         currentEnchere= (Enchere)e.CurrentSelection.FirstOrDefault();
         await Navigation.PushModalAsync(new VueEnchere(currentEnchere));
-    }
-}
-
-   /* private async void CollectionView_SelectionChanged(System.Object sender, Microsoft.Maui.Controls.SelectionChangedEventArgs e)
+    } 
+    private async void Bouton(System.Object sender, Microsoft.Maui.Controls.SelectionChangedEventArgs e)
     {
         currentEnchere = (Enchere)e.CurrentSelection.FirstOrDefault();
         string result = await DisplayPromptAsync("Enchère", "Donner votre prix");
@@ -36,7 +34,12 @@ public partial class VueEnchereClassique : ContentPage
         vueModele.PostEnchereClassique(Leresult, currentEnchere);
     }
 }
-   */
+ 
+
+  
+    
+
+  
 
 
 

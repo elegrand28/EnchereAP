@@ -26,18 +26,28 @@
                                 <Frame BackgroundColor="White">
 
                                     <Image Source="{Binding Leproduit.Photo}"/>
+                                    
                              </Frame>
-                            <Frame BackgroundColor="White">
-                                <ListView ItemsSource="{Binding EncherirList}">
-                                    <ListView.ItemTemplate>
-                                        <DataTemplate>
-                                            <Label TextColor="Black" Text="{Binding PrixEnchere}"/>
-                                        </DataTemplate>
-                                    </ListView.ItemTemplate>
-                                </ListView>
+                            <CollectionView ItemsSource="{Binding EnchereClassiqueList}" SelectionChanged="Bouton" SelectionMode="Single">
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackLayout>
+                                        
+                                            <Frame BackgroundColor="Black" 
+                                                   
+                                                  >
+                                            <Label Text="BOUTON"></Label>
 
-                            </Frame>
+                                            </Frame>
+                                       </StackLayout>
+
+
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
                                 
+                            </CollectionView>
+                 
+                           
                             
                           
                           
