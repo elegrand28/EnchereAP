@@ -16,9 +16,6 @@ namespace ApS2.Modele
         private float _prixEnchere;
         private DateTime dateenchere;
         private string _pseudo;
-
-
-
         #endregion
 
         #region Constructeurs

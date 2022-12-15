@@ -19,9 +19,6 @@ namespace ApS2.Modele
         private double _latitude;
         private double _longitude;
 
-       
-
-
         #endregion
 
         #region Constructeurs 

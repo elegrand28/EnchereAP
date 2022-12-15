@@ -12,12 +12,6 @@ namespace ApS2.Modele
         private static List<TypeEnchere> collClass = new List<TypeEnchere>();
         private int _id;
         private string _nom;
-
-      
-
-
-
-
         #endregion
 
         #region Constructeurs 

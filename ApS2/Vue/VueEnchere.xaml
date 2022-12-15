@@ -4,7 +4,7 @@
              x:Class="ApS2.Vue.VueEnchere"
              Title="VueEnchere">
     <ScrollView BackgroundColor="White">
-        <CollectionView ItemsSource="{Binding ListEncherir}" SelectionChanged="Bouton" SelectionMode="Single">
+        <CollectionView ItemsSource="{Binding ListEncherir} ">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
 

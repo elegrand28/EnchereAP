@@ -49,27 +49,9 @@ namespace ApS2.Modele
         public DateTime DateFin { get => _dateFin; set => _dateFin = value; }
         public int PrixReserve { get => _prixReserve; set => _prixReserve = value; }
         public int PrixDepart { get => _prixDeDepart; set => _prixDeDepart = value; }
-
-
-       
-       
-
-
         public Produit Leproduit { get => _leProduit; set => _leProduit = value; }
-
-
-
-
-
-
         public Magasin LeMagasin { get => _leMagasin; set => _leMagasin = value; }
-
         public TypeEnchere TypeEnchere { get => _typeEnchere; set => _typeEnchere = value; }
-
-
-
-
-
 
         #endregion
 

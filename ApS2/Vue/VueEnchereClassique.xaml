@@ -28,24 +28,11 @@
                                     <Image Source="{Binding Leproduit.Photo}"/>
                                     
                              </Frame>
-                            <CollectionView ItemsSource="{Binding EnchereClassiqueList}" SelectionChanged="Bouton" SelectionMode="Single">
-                                <CollectionView.ItemTemplate>
-                                    <DataTemplate>
-                                        <StackLayout>
-                                        
-                                            <Frame BackgroundColor="Black" 
-                                                   
-                                                  >
-                                            <Label Text="BOUTON"></Label>
 
-                                            </Frame>
-                                       </StackLayout>
-
-
-                                    </DataTemplate>
-                                </CollectionView.ItemTemplate>
+                            <Button>
                                 
-                            </CollectionView>
+                            </Button>
+                          
                  
                            
                             
